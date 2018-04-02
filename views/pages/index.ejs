@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('../partial/head') %>
+    <title>首页</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <%- include('../partial/header') %>
+      
+      <div class="wrapp-inner">
+        <% for(var i in list){ %>
+          <a class="article-item" href="/article/<%= list[i]._id %>">
+            <h3 class="item-title"><%= list[i].title %></h3>
+            <p class="item-des"><%= list[i].content %></p>
+          </a>
+        <% } %>
+      </div>
+    </div>
+<%- include('../partial/footer') %>

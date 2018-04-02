@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('../partial/head') %>
+    <title>管理员</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="wrapp-inner">
+        <div class="container">
+          <div class="admin-drop">
+            <div class="btn-group" role="group" aria-label="...">
+              <button type="button" class="btn btn-primary"><a class="add-a" href="/admin/add">添加文章</a></button>
+            </div>
+          </div>  
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">标题</th>
+                <th scope="col">描述</th>
+                <th scope="col">创建时间</th>
+                <th scope="col">更新时间</th>
+                <th scope="col">操作</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% for(var i in list){ %>
+                <tr>
+                  <th scope="row"><%= list[i].title %></th>
+                  <td><button type="button" class="btn btn-primary btn-sm">查看</button></td>
+                  <td><%= list[i].createdAt %></td>
+                  <td><%= list[i].updateAt %></td>
+                  <td>
+                    <a class="btn btn-default" href="/admin/edit/<%= list[i]._id %>" role="button">修改</a>
+                    <button class="btn btn-default del" id="<%= list[i]._id %>" data-id="<%= list[i]._id %>" role="button">删除</button>
+                  </td>
+                </tr>
+              <% } %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+<%- include('../partial/footer') %>
+<script src="http://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  $('.del').on('click', function() {
+    console.log('点击删除')
+    var id = $(this).data('id');
+    $.ajax({
+      url: '/admin/delete?id=' + id,
+      type: 'delete',
+      success: function (res) { 
+        console.log(res, '删除成功'); 
+        window.history.go(0);
+      }
+    })
+  })
+</script>

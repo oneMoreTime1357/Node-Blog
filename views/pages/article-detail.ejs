@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('../partial/head') %>
+    <title><%= detail.title %></title>
+  </head>
+  <body>
+    <div class="main-container">
+      <%- include('../partial/header') %>
+      
+      <div class="wrapp-inner">
+        <div class="post-detail">
+          <h3 class="post-title"><%= detail.title %></h3>
+          <p class="post-author"><%= '作者：' + detail.author %></p>
+          <p class="post-date"></p>
+          <div class="post-content"><%= detail.content %></div>
+        </div>
+      </div>
+    </div>
+<%- include('../partial/footer') %>

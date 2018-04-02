@@ -1,0 +1,49 @@
+header {
+  min-height: 60px;
+  overflow: hidden;
+  color: #42b983;
+
+  .nav-head {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    overflow: hidden;
+  }
+
+  .logo-link {
+    float: left;
+  }
+  
+  .menu {
+    float: right;
+    left: 80px;
+  }
+
+  .logo-link img {
+      float: left;
+      height: 45px;
+  }
+
+  .logo-link span {
+      float: left;
+      font-size: 17px;
+      margin-top: 28px;
+      line-height: 1.4;
+      // vertical-align: middle;
+      // margin-bottom: 10px;
+  }
+
+  .nav-list {
+    float: right;
+  }
+
+  .nav-list-item {
+      display: inline-block;
+      padding: 32px  10px  10px 10px;
+      a {
+          font-size: 16px;
+          line-height: 1.4;
+      }
+  }
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('../partial/head') %>
+    <title>编辑文章</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="wrapp-inner">
+        <div class="container">
+          <h1 class="h3" style="text-align: center">编辑文章</h1>
+          <form method="post" action="/admin/update">
+            <label for="basic-url">标题</label>
+            <input class="form-control" type="text" name="title" placeholder="请输入文章标题" value="<%= detail.title %>">
+            <label style="margin-top: 20px" for="basic-url">作者</label>
+            <input class="form-control" type="text" name="author" placeholder="请输入作者名称" value="<%= detail.author %>">
+            <label style="margin-top: 20px" for="basic-url">标签</label>
+            <input class="form-control" type="text" name="tags" placeholder="请输入文章标签" value="<%= detail.tags %>">
+            <label style="margin-top: 20px" for="basic-url" >正文内容</label>
+            <textarea class="form-control" rows="10" placeholder="请输入文章内容" name="content"><%= detail.content %></textarea>
+            <button style="margin-top: 20px" class="btn btn-primary" type="submit">提交</button>
+          </form>
+        </div>
+      </div>
+    </div>
+<%- include('../partial/footer') %>

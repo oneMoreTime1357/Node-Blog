@@ -1,0 +1,25 @@
+.article-item {
+  color: #333;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #ececec;
+
+  .item-title {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .item-des {
+    padding-top: 15px;
+    font-size: 14px;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
+}
+
+a {
+  display: block;
+}

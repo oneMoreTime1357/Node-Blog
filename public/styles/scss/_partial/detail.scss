@@ -1,0 +1,27 @@
+.post-detail {
+  .post-title {
+    font-size: 20px;
+    color: #2c3e50;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .post-author {
+    color: #7f8c8d;
+    font-size: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
+  .post-date {
+    color: #7f8c8d;
+    font-size: 12px;
+  }
+
+  .post-content {
+    font-size: 16px;
+    color: #34495e;
+    line-height: 1.6;
+  }
+}

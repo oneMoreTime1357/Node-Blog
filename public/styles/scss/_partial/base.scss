@@ -1,0 +1,15 @@
+.main-container {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.wrapp-inner {
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+
+@media screen and (max-width: 750px) {
+  .main-container {
+    width: 100%;
+  }
+}
