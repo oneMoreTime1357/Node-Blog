@@ -11,6 +11,7 @@
           <h1 class="h3" style="text-align: center">编辑文章</h1>
           <form method="post" action="/admin/update">
             <label for="basic-url">标题</label>
+            <input type="hidden" name="id" value="<%= detail._id %>">
             <input class="form-control" type="text" name="title" placeholder="请输入文章标题" value="<%= detail.title %>">
             <label style="margin-top: 20px" for="basic-url">作者</label>
             <input class="form-control" type="text" name="author" placeholder="请输入作者名称" value="<%= detail.author %>">

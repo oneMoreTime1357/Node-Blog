@@ -66,20 +66,21 @@ router.get('/edit/:id', function(req, res, next) {
 
 router.post('/update', function(req, res, next) {
   var id = req.body.id;
+  console.log(req.body, 'dddddd22222222')
   articleModel.findById(id, function(err, data) {
     if (err) {
-      return console.log(err)
+      return console.log('update err', err)
     }
-
+    console.log(data, 'update00000000000000000')
     data.title = req.body.title;
     data.content = req.body.content;
     data.author = req.body.author;
     data.tags = req.body.tags || '';
     data.save(function(err) {
       if (err) {
-        return console.log(err)
+        return console.log('save eeeee', err)
       }
-      res.redirect('pages/article-detail', { detail: data });
+      res.redirect('/admin');
     })
   })
 })

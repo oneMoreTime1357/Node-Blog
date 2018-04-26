@@ -16,7 +16,7 @@
   setBodyFontSize();
   var meta = document.createElement('meta')
   meta.setAttribute('content', 'initial-scale=' + 1/dpr + ', maximum-scale=' + 1/dpr + ', minimum-scale=' + 1/dpr + ', user-scalable=no');
-  document.getElementsByTagName('head')[0].appendChild(meta)
+  // document.getElementsByTagName('head')[0].appendChild(meta)
   // set 1rem = viewWidth / 10
   function setRemUnit () {
     // if (docEl.clientWidth <= 750) {

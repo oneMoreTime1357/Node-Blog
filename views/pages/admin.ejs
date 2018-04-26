@@ -27,7 +27,7 @@
               <% for(var i in list){ %>
                 <tr>
                   <th scope="row"><%= list[i].title %></th>
-                  <td><button type="button" class="btn btn-primary btn-sm">查看</button></td>
+                  <td><a href="/article/<%= list[i]._id %>" class="btn btn-primary btn-sm">查看</a></td>
                   <td><%= list[i].createdAt %></td>
                   <td><%= list[i].updateAt %></td>
                   <td>
